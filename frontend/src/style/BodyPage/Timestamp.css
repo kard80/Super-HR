@@ -1,0 +1,74 @@
+.timestamp {
+    background-color: white;
+    width: 1330px;
+    height: 683px;
+    position: absolute;
+    top: 68px;
+    left: 175px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    margin-top: 20px;
+    align-items: flex-end;
+
+}
+
+.head select {
+    width: 100px;
+    height: 20px;
+    outline: none;
+}
+
+.head select option {
+    outline: none;
+    border: none;
+}
+
+.head button {
+    border-radius: 36px;
+    border: none;
+    box-shadow: 5px 5px 5px;
+    color: white;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.head .clockOut {
+    background-color: #62E057;
+}
+
+.head button:active {
+    position: relative;
+    top: 2px;
+}
+
+.table {
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+.table table {
+    width: 80%;
+    margin: auto;
+}
+
+.table th {
+    color: white;
+    background-color: #2E94DD;
+    padding: 10px 20px 10px 20px;
+}
+
+.timestamp .table tr {
+    margin-left: 20px;
+}

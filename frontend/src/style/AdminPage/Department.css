@@ -1,0 +1,62 @@
+.department {
+    background-color: white;
+    width: 1330px;
+    height: 683px;
+    position: absolute;
+    top: 68px;
+    left: 175px;
+}
+
+.department .headTable{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.department .headTable button {
+    border: none;
+    color: white;
+    background-color: #62E057;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.department .head {
+    width: 90%;
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+.department table {
+    width: 100%;
+    text-align: left;
+    margin: 0px auto 0px auto;
+}
+
+.department th {
+    color: white;
+    background-color: #2E94DD;
+    padding: 10px 20px 10px 20px;
+}
+
+.department td {
+    padding: 10px 20px 10px 20px;
+}
+
+.department td:hover {
+    color: #2E94DD;
+}
+
+.department a {
+    color: #2E94DD;
+    font-weight: bold;
+}
+
+.department td button {
+    width: 50px;
+}

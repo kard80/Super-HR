@@ -1,0 +1,33 @@
+.about {
+    background-color: #1E1C1C;
+    color: #E6E6E6;
+}
+
+.about h1 {
+    color: #E6E6E6;
+    padding-top: 35px;
+    font-size: 36px;
+}
+
+.about > div {
+    width: 1024px;
+    margin: auto;
+}
+
+.list {
+    width: 100%;
+}
+
+.list ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    font-size: 24px;
+}
+
+li a {
+    color: #E6E6E6;
+}

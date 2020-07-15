@@ -1,0 +1,117 @@
+
+.login {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.block {
+    background-color: white;
+    border-radius: 10px;
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.block > div:first-of-type {
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+    height: 40px;
+}
+
+.cross {
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+.login .bar1,.login .bar2 {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.login .bar1 {
+    transform: rotate(45deg) translate(19px, -6px);
+}
+
+.login .bar2 {
+    transform: rotate(-45deg) translate(-12px);
+}
+
+
+.header {
+    height: 40px;
+    margin-top: -60px;
+    font-size: 24px;
+}
+
+.header h1 {
+    color: #169DD7;
+}
+
+.loginField{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+}
+
+.loginField div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    border: 1px solid #169DD7;
+    margin-top: -20px;
+    border-radius: 10px;
+}
+
+.loginField input, .loginField button{
+    width: 80%;
+    outline: none;
+    margin-top: 20px;
+}
+
+.loginField input {
+    border: 1px solid #E6E6E6;
+    padding-left: 1%;
+}
+
+.loginField button {
+    background-color: #169DD7;
+    border-radius: 10px;
+    border-color: #169DD7;
+}
+
+.buttonLogin {
+    font-weight: bold;
+    color:white;
+    font-size: 18px;
+}
+
+.buttonLogin:hover{
+    color: white;
+}
+
+.createAccount {
+    padding-right: 120px;
+    margin-top: 5px;
+}
+
+.buttonLogin {
+    width: 100%;
+    position: relative;
+    height: 35px;
+}

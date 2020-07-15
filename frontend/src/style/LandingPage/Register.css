@@ -1,0 +1,77 @@
+.register .container {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    top: 20vh;
+    left: 580px;
+    box-shadow: 0 4px 4px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.register .crossSign {
+    width: 20px;
+    height: 20px;
+    display: block;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.register #item1 {
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    transform: rotate(45deg) translate(-6px, -10px)
+}
+.register #item2 {
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    transform: rotate(-45deg) translate(21px, -16px);
+}
+
+.register .container > * {
+    padding-top: 20px;
+}
+
+.register button {
+    width: 300px;
+    height: 35px;
+    color: white;
+    background-color: #2E94DD;
+    border-color: #2E94DD;
+    border: none;
+    border-radius: 4px;
+}
+
+.register button:active {
+    margin-top: 5px;
+}
+
+.register .container div:last-of-type {
+    padding-top: 60px;
+}
+
+.register input {
+    width: 300px;
+}
+
+.register input[type="password"] {
+    border: none;
+    border: solid 1px rgb(164, 164, 164);
+}
+
+.register .container .userType {
+    width: 300px;
+    flex-direction: row;
+}
+
+.register .container .userType label, .register .container .userType input {
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: 20px;
+}

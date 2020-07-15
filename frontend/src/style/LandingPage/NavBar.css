@@ -1,0 +1,79 @@
+#navBar {
+    width: 100%;
+    height: 72px;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+}
+
+.nav{
+    height: 72px;
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1 {
+    font: 36px;
+    color: white;
+    padding-top: 10px;
+}
+
+.navList ul{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.navList ul li {
+    cursor: pointer
+}
+
+.navList a {
+    color: white;
+}
+
+.navList button {
+    color: black;
+    border-radius: 3px;
+    border-style: none;
+    width: 65px;
+    height: 30px;
+    font-size:16px;
+    outline: none;
+}
+
+.loginField button {
+    border: none;
+}
+
+.navList button:active, .cross:active {
+    position: relative;
+    top: 5px;
+}
+
+.navList button:hover, .cross:hover {
+    cursor: pointer;
+}
+
+.loginField button:active {
+    position: relative;
+    top: 3px;
+}
+
+.loginField button:hover {
+    cursor: pointer;
+}
+
+
+.loginField p:hover {
+    color: #169DD7;
+    cursor: pointer;
+    text-decoration: underline;
+}

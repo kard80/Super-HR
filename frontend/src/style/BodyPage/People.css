@@ -1,0 +1,36 @@
+.people {
+    background-color: white;
+    width: 1330px;
+    height: 683px;
+    position: absolute;
+    top: 68px;
+    left: 175px;
+}
+
+.people .head {
+    margin-top: 10px;
+    position: relative;
+    left: 1px;
+    width: 80%;
+}
+
+.people table {
+    width: 100%;
+    text-align: left;
+    margin: auto
+}
+
+.people th {
+    color: white;
+    background-color: #2E94DD;
+    padding: 10px 20px 10px 20px;
+}
+
+.people td {
+    padding: 10px 20px 10px 20px;
+}
+
+.people a {
+    color: #2E94DD;
+    font-weight: bold;
+}

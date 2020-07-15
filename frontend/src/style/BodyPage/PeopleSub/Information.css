@@ -1,0 +1,9 @@
+.information {
+    background-color: white;
+    width: 1180px;
+    height: 375px;
+    margin-top: 220px;
+    margin-left: 175px;
+    box-shadow: 0 4px 4px;
+    display: flex;
+}

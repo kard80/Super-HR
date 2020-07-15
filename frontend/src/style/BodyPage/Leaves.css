@@ -1,0 +1,166 @@
+.leaves {
+    width: 665px;
+    height: 683px;
+    position: absolute;
+    top: 68px;
+    left: 175px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.summaryAndHistory {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary {
+    background-color: white;
+    width: 98%;
+    height: 49%;
+}
+
+.summary > div:first-of-type {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.summary table {
+    margin-left: 10px;
+    width: 95%;
+}
+
+.summary th {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.summary td {
+    padding-top: 18px;
+}
+
+.summary td:last-of-type {
+    text-align: right;
+}
+
+.history {
+    background-color: white;
+    width: 98%;
+    height: 49%;
+}
+
+.history > div {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+.history select {
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.history table {
+    margin-left: 10px;
+    width: 95%;
+}
+
+.history th {
+    color: white;
+    background-color: #2E94DD;
+    padding: 10px 20px 10px 20px;
+}
+
+.history td {
+    padding: 10px 20px 10px 20px;
+}
+
+.request{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.request > div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.request > div > div > *{
+    margin-bottom: 8px;
+}
+
+.request select {
+    width: 100%;
+    height: 30px;
+}
+
+.request [type=radio] {
+    opacity: 0;
+    width: 0;
+}
+
+.request [type=radio] + label {
+    background-color: #f0eaea;
+    border: solid 1px #9EA09E;
+    padding: 3px 7px;
+
+}
+
+#radioStartDay + label, #radioEndDay + label {
+    border-radius: 5px 0 0 5px;
+}
+
+#radioStartPm + label, #radioEndPm + label {
+    border-radius: 0 5px 5px 0;
+}
+
+.request [type=radio]:checked + label {
+    color: white;
+    background-color:#2E94DD;
+    border: solid 1px #2E94DD;
+}
+
+.request > div > div:last-of-type {
+    text-align: right;
+}
+
+.request textarea {
+    width: 100%;
+    height: 60px;
+}
+
+.request [type=submit] {
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.request [type=submit]:active {
+    margin-top: 5px;
+}
+
+.request [type=date] {
+    width: 100%;
+}
+
+.request input:invalid {
+    border-color: 5px solid red;
+}
+

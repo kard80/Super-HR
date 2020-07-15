@@ -1,0 +1,20 @@
+body {
+    background-color: #E5E5E5;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+option:focus {
+    outline: none;
+}
+
+select option {
+    outline: none;
+    border: none;
+}

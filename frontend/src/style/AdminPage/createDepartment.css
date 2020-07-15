@@ -1,0 +1,108 @@
+.createDepartment {
+    position: absolute;
+    left: 500px;
+    top: 68px;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.select {
+    display: flex;
+    width: 200px;
+    margin-top: 80px;
+}
+
+#department, #position {
+    display: none;
+}
+
+.label {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #F8F8F8;
+    color: #D0D0D0;
+}
+
+.selectChoice {
+    width: 100%;
+    height: 100%;
+    background-color: #7FEB14;
+    color: white;
+}
+
+.two {
+    padding-left: 15px;
+}
+
+.left {
+    background-color: green;
+}
+
+.field {
+    width: 240px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.insertDepartment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.insertDepartment *+input {
+    margin-bottom: 8px;
+    width: 180px;
+    height: 30px;
+}
+
+.sendButton {
+    width: 180px;
+    height: 25px;
+    border: none;
+    background-color: #2E94DD;
+    color: white;
+    border-radius: 10px;
+}
+
+.positionStaff {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.createPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 20px;
+    border-right: 1px solid #D0D0D0;
+}
+
+.createPosition *+input, .createPosition *+select {
+    margin-bottom: 8px;
+    width: 180px;
+    height: 30px;
+}
+
+.syncPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.syncPosition *+select {
+    margin-bottom: 8px;
+    width: 180px;
+    height: 30px;
+}

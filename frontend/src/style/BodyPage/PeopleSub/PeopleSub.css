@@ -1,0 +1,83 @@
+.profileAndPanel {
+    width: 90%;
+    margin: auto;
+}
+
+.general {
+    width: 1180px;
+    height: 200px;
+    position: absolute;
+    top: 68px;
+    left: 175px;
+}
+
+.general a {
+    color: black;
+}
+
+.backArrow {
+    font-size: 20px;
+    color: black;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width:100%;
+}
+.backArrow i {
+    padding-right: 10px;
+}
+
+.profileAndPanel {
+    margin-right: 55px;
+    width:100%;
+}
+
+.profile {
+    background-color: white;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0px 1px 4px;
+}
+
+.profilePicture {
+    cursor: pointer;
+}
+
+.profile > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+    margin-left: 80px;
+}
+
+.profile > div > div:first-child {
+    display: flex;
+}
+
+.profile .name h1{
+    margin-bottom: -10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.containerPersonal {
+    background-color: white;
+    height: 500px;
+    margin-top: 20px;
+    box-shadow: 0 4px 4px;
+}
+
+.profile .button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #7FEB14;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

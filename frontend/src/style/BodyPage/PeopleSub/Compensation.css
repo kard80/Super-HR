@@ -1,0 +1,9 @@
+.compensation {
+    background-color: white;
+    height: 375px;
+    width: 1180px;
+    margin-top: 220px;
+    margin-left: 175px;
+    box-shadow: 0 4px 4px;
+    display: flex;
+}
