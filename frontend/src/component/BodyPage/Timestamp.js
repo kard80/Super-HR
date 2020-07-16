@@ -14,7 +14,7 @@ export default function Timestamp() {
     const token = jwtDecode(localStorage.getItem('ACCESS_TOKEN'))
 
     const fetchData = async () => {
-        const result = await axios.get(`/timeAttendance/${token.id}`,{headers: {Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE1OTQ1NTY5NzEsImV4cCI6MTU5NDU2MDU3MX0.Ng29XZ55sIaqfDhjgcLRW1-sTs5GSmfBnvx6bPh67VQ`}});
+        const result = await axios.get(`/timeAttendance/${token.id}`,{headers: {Authorization: token}});
         setTimeAttendance(result.data)
     }
 

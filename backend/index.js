@@ -11,7 +11,6 @@ const position = require('./routes/position')
 const timeAttendance = require('./routes/timeAttendance')
 const user = require('./routes/user')
 
-// const auth = require('./config/authorize.js')
 const passport = require('passport');
 require('./config/passport/passport');
 const authentication = passport.authenticate('jwt', {session: false});

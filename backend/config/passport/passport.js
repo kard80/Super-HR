@@ -8,13 +8,14 @@ const option = {
     secretOrKey: 'myPersonalProject'
 }
 
-passport.use(
-    new JWTStrategy(option, async(payload, done) => {
-    const user = await db.user.findOne({where : {id: payload.id}})
+const jwt = new JWTStrategy(option, async (payload, done) => {
+     const user = await db.user.findOne({where: {id: payload.id}})
+     if(user) {
+         done(null, user)
+     } else {
+         done(null, false)
+     }
 
-    if(user) {
-        done(null, user);
-    }else {
-        done(null, false);
-    }
-}))
+})
+
+passport.use('jwt', jwt)

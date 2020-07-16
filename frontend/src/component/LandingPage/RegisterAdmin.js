@@ -12,18 +12,21 @@ export default function Register() {
 
 
     const submit = async () => {
-        const body = {
-            username,
-            password,
-            role: 'Admin',
+        if (username.length === 0 && password.length === 0) {
+            alert('Please fill your username and password')
+        } else {
+            const body = {
+                username,
+                password,
+                role: 'Admin',
+            }
+            await axios.post('/user/register', body)
+
+            alert('registry completed')
+            setUsername('')
+            setPassword('')
+            setFinished(!finished)
         }
-        await axios.post('/user/register', body)
-
-        alert('registry completed')
-
-        setUsername('')
-        setPassword('')
-        setFinished(!finished)
     }
 
 
