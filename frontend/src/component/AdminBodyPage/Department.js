@@ -6,7 +6,6 @@ import '../../style/AdminPage/Department.css'
 import axios from '../../config/axios'
 
 export default function Department() {
-    const [create, setCreate] = useState(false)
     const [position, setPosition] = useState([])
     const [select, setSelect] = useState('select')
 

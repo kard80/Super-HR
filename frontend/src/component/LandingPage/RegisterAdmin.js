@@ -6,8 +6,6 @@ import axios from '../../config/axios'
 export default function Register() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [usernameArray, setUsernameArray] = useState([])
-    const [passwordArray, setPasswordArray] = useState([])
     const [finished, setFinished] = useState(false)
 
 

@@ -79,11 +79,11 @@ export default function General(props) {
     
     useEffect(() => {
         fetchData();
-    }, [])
+    },[])
 
     useEffect(() => {
         fetchPosition();
-    }, [department])
+    },[department])
 
     const [general, setGeneral] = useState(true)
     const [info, setInfo] = useState(false)

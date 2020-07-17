@@ -3,9 +3,6 @@ import './App.css';
 import { Switch, Route, BrowserRouter, Link, Redirect } from 'react-router-dom'
 import LandingPage from './LandingPage/LandingPage'
 import Register from './LandingPage/Register'
-import Login from './LandingPage/Login'
-import Body from './BodyPage/Body'
-import PeopleSub from './BodyPage/PeopleSub/PeopleSub'
 import General from './BodyPage/PeopleSub/General'
 import Information from './BodyPage/PeopleSub/Information'
 import Compensation from './BodyPage/PeopleSub/Compensation'
@@ -18,7 +15,6 @@ import Department from './AdminBodyPage/Department'
 import TimestampAdmin from './AdminBodyPage/TimestampAdmin'
 import CreateDepartment from './AdminBodyPage/CreateDepartment'
 import LeavesAdmin from './AdminBodyPage/LeavesAdmin'
-import * as Scroll from 'react-scroll'
 
 function App() {
   return (

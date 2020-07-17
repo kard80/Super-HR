@@ -3,7 +3,6 @@ import '../../style/BodyPage/Timestamp.css'
 import Navbar from '../BodyPage/NavbarBody'
 import Sidebar from '../BodyPage/Sidebar'
 import axios from '../../config/axios'
-import jwtDecode from 'jwt-decode'
 
 export default function TimestampAdmin() {
     const [timeAttendance, setTimeAttendance] = useState([]);
