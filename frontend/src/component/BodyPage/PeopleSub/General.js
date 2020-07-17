@@ -39,7 +39,7 @@ export default function General(props) {
 
 
     const fetchData = async () => {
-        const result = await axios.get(`/person/${props.location.id}`)
+        const result = await axios.get(`/person/${localStorage.getItem('PeopleSub')}`)
         const department = await axios.get('/department')
         setName(result.data.name)
         setSurname(result.data.surname)
@@ -232,7 +232,7 @@ export default function General(props) {
                             <div id="item5">
                                 <label>Department</label>
                                 <br />
-                                <select disabled={whoEdit(false, true)} value={department} onChange={e => setDepartment(e.target.value)}>
+                                <select disabled={whoEdit(false, false)} value={department} onChange={e => setDepartment(e.target.value)}>
                                     <option>--select--</option>
                                     {pullDepartment.map(item => (
                                         <option value={item.id}>{item.department}</option>
@@ -242,7 +242,7 @@ export default function General(props) {
                             <div id="item6">
                                 <label>Job title</label>
                                 <br />
-                                <select  disabled={whoEdit(false, true)} value={jobTitle} onChange={e => setJobTitle(e.target.value)}>
+                                <select  disabled={whoEdit(false, false)} value={jobTitle} onChange={e => setJobTitle(e.target.value)}>
                                     <option>--Select--</option>
                                     {pullPosition.map(item => (
                                         <option value={item.id}>{item.position}</option>

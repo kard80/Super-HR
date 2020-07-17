@@ -43,7 +43,7 @@ export default function People() {
                         </tr>
                         {person.map(item => (
                             <tr>
-                                <td><Link to={{ pathname: "/people/general", id: item.id, }}>{item.name} {item.surname}</Link></td>
+                                <td onClick={() => localStorage.setItem('PeopleSub', item.id)}><Link to={{ pathname: "/people/general"}}>{item.name} {item.surname}</Link></td>
                                 <td>{
                                     typeof (item.positionId) !== 'object' ?
                                         item.position.position :

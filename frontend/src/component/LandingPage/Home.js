@@ -5,10 +5,13 @@ import '../../style/LandingPage/Home.css'
 export default function Home() {
     useEffect(() => {
         let loadTime = new Date();
-        let unloadTime = new Date(localStorage.getItem('unloadTime'))
+        let storage = localStorage.getItem('unloadTime')
+        let unloadTime = new Date(storage)
         let refreshTime = loadTime.getTime() - unloadTime.getTime();
         if(refreshTime > 3000) {
             window.localStorage.removeItem('ACCESS_TOKEN')
+            window.localStorage.removeItem('PeopleSub')
+            window.localStorage.removeItem('unloadTime')
         }
     }, [])
     return (

@@ -20,7 +20,7 @@ export default function PeopleSub(props) {
 
 
     const getData = async () => {
-        const result = await axios.get(`/person/${props.id}`);
+        const result = await axios.get(`/person/${localStorage.getItem('PeopleSub')}`);
         setPerson(result.data)
     }
 
@@ -49,34 +49,39 @@ export default function PeopleSub(props) {
 
                 taxID, accountNO, accountName, compensationType, salary,
             }
-            await axios.put(`/person/${props.id}`, body)
+            await axios.put(`/person/${localStorage.getItem('PeopleSub')}`, body)
         } else {
             const formData = new FormData();
-            formData.append('file', file); formData.append('name', name || '');
-            formData.append('surname', surname || ''); formData.append('email', email || '');
+            formData.append('file', file); 
+            formData.append('name', name || '');
+            formData.append('surname', surname || ''); 
+            formData.append('email', email || '');
             formData.append('gender', gender || '');
-            formData.append('dateOfBirth', new Date(dateOfBirth) || '');
+            if(dateOfBirth) formData.append('dateOfBirth', new Date(dateOfBirth) || '');
             formData.append('martialStatus', martialStatus || '');
-            formData.append('nationality', nationality || ''); formData.append('IDNumber', IDNumber || '');
+            formData.append('nationality', nationality || ''); 
+            formData.append('IDNumber', IDNumber || '');
             formData.append('contactNumber', contactNumber || '');
             formData.append('address', address || '');
 
             formData.append('employeeCode', employeeCode || '');
-            formData.append('workingStartDate', new Date(workingStartDate) || '');
-            formData.append('probationEndDate', new Date(probationEndDate) || '');
-            formData.append('jobTitle', jobTitle || '');
-            formData.append('department', department || ''); formData.append('employeeType', employeeType || '');
-            formData.append('employeeStatus', employeeStatus || ''); formData.append('manager', manager || '');
-            formData.append('resignationDate', new Date(resignationDate) || '');
+            if(workingStartDate) formData.append('workingStartDate', new Date(workingStartDate) || '');
+            if(probationEndDate) formData.append('probationEndDate', new Date(probationEndDate) || '');
+            // formData.append('jobTitle', jobTitle);
+            // formData.append('department', department); 
+            formData.append('employeeType', employeeType || '');
+            formData.append('employeeStatus', employeeStatus || ''); 
+            formData.append('manager', manager || '');
+            if(resignationDate) formData.append('resignationDate', new Date(resignationDate) || '');
             formData.append('resignationReason', resignationReason || '');
 
             formData.append('taxID', taxID || '');
             formData.append('accountNO', accountNO || '');
             formData.append('accountName', accountName || '');
             formData.append('compensationType', compensationType || '');
-            formData.append('salary', salary || String(''));
+            formData.append('salary', salary || '');
 
-            await axios.put(`/person/withPicture/${props.id}`, formData)
+            await axios.put(`/person/withPicture/${localStorage.getItem('PeopleSub')}`, formData)
         }
         await getData();
         alert('Update completed')

@@ -14,7 +14,6 @@ export default function NavbarBody(props) {
     const fetchData = async () => {
         const result = await axios.get(`/person/${token.id}`)
         setPerson(result.data)
-        console.log(result.data)
     }
 
     const signOutFnc = () => {
@@ -22,7 +21,7 @@ export default function NavbarBody(props) {
     }
 
     window.onbeforeunload = () => {
-        window.localStorage.unloadTime = JSON.stringify(new Date())
+        localStorage.setItem('unloadTime', new Date())
     }
 
     useEffect(() => {

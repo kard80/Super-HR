@@ -1,5 +1,7 @@
 body {
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5; */
+    background-color: red;
+    border: solid;
 }
 
 input:focus {
