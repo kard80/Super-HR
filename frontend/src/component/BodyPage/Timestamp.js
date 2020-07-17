@@ -11,22 +11,23 @@ export default function Timestamp() {
     const [dropdownValue, setDropdownValue] = useState('')
     const searchNull = timeAttendance.some(el => el.clockOut === null)
 
-    const token = jwtDecode(localStorage.getItem('ACCESS_TOKEN'))
+    const accessToken = localStorage.getItem('ACCESS_TOKEN')
+    const token = jwtDecode(accessToken)
 
     const fetchData = async () => {
-        const result = await axios.get(`/timeAttendance/${token.id}`,{headers: {Authorization: token}});
+        const result = await axios.get(`/timeAttendance/${token.id}`,{headers: {Authorization: `Bearer ${accessToken}`}});
         setTimeAttendance(result.data)
     }
-
-
+    
+    
     useEffect(() => {
         fetchData();
     }, [])
-
+    
     useEffect(() => {
         dropdownInsert()
     }, [timeAttendance])
-
+    
     useEffect(() => {
         setDropdownValue(dropdown[0])
     }, [dropdown])
@@ -59,12 +60,12 @@ export default function Timestamp() {
         }
         return arr
     }
-
+    
     const clickClockIn = async () => {
         const body = {
             personId: token.id
         }
-        await axios.post('/timeAttendance', body, {headers: {Authorization: `Bearer ${token}`}})
+        await axios.post('/timeAttendance', body, {headers: {Authorization: `Bearer ${accessToken}`}})
         alert('Clock-in completed')
         fetchData();
     }
@@ -78,7 +79,7 @@ export default function Timestamp() {
             remark,
             personId: token.id,
         }
-        await axios.put('/timeAttendance', body, {headers: {Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE1OTQ1NTY5NzEsImV4cCI6MTU5NDU2MDU3MX0.Ng29XZ55sIaqfDhjgcLRW1-sTs5GSmfBnvx6bPh67VQ`}})
+        await axios.put('/timeAttendance', body, {headers: {Authorization: `Bearer ${accessToken}`}})
         fetchData();
     }
 

@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const personId = req.params.id;
-    const timeAttendance = await db.timeAttendance.findOne({where: {personId,}})
+    const timeAttendance = await db.timeAttendance.findAll({where: {personId,}})
     res.status(200).send(timeAttendance);
 })
 
