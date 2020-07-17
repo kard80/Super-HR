@@ -6,6 +6,7 @@ import Sidebar from '../Sidebar'
 import '../../../style/BodyPage/PeopleSub/PeopleSub.css'
 import axios from '../../../config/axios'
 import { previewImage } from 'antd/lib/upload/utils'
+import '../../../upload'
 
 export default function PeopleSub(props) {
     const [file, setFile] = useState('')

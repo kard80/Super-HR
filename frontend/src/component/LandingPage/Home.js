@@ -3,14 +3,14 @@ import { Col, Row } from 'antd'
 import '../../style/LandingPage/Home.css'
 
 export default function Home() {
-    // useEffect(() => {
-    //     let loadTime = new Date();
-    //     let unloadTime = new Date(localStorage.getItem('unloadTime'))
-    //     let refreshTime = loadTime.getTime() - unloadTime.getTime();
-    //     if(refreshTime > 3000) {
-    //         window.localStorage.removeItem('ACCESS_TOKEN')
-    //     }
-    // }, [])
+    useEffect(() => {
+        let loadTime = new Date();
+        let unloadTime = new Date(localStorage.getItem('unloadTime'))
+        let refreshTime = loadTime.getTime() - unloadTime.getTime();
+        if(refreshTime > 3000) {
+            window.localStorage.removeItem('ACCESS_TOKEN')
+        }
+    }, [])
     return (
         <div>
             <Row className="home">
