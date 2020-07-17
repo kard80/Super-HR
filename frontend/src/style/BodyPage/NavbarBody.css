@@ -42,4 +42,7 @@
     border-radius: 4px;
     outline: none;
     cursor: pointer;
+    width: 65px;
+    position: relative;
+    right: 10px;
 }

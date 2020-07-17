@@ -12,7 +12,7 @@ export default function Register() {
 
 
     const submit = async () => {
-        if (username.length === 0 && password.length === 0) {
+        if (username.length === 0 || password.length === 0) {
             alert('Please fill your username and password')
         } else {
             const body = {
