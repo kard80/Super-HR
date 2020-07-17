@@ -13,9 +13,9 @@ export default function LandingPage () {
         return (
             <div>
                 <NavBar/>
-                {/* <Home />
+                <Home />
                 <Feature/>
-                <About /> */}
+                <About />
             </div>
         )
     }
