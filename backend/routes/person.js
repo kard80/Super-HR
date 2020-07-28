@@ -42,7 +42,7 @@ router.put('/syncPosition', async (req, res) => {
 
 const storage = multer.diskStorage({
     destination: (req, res, next) => {
-        next(null, '../frontend/src/upload/')
+        next(null, '../frontend/src/upload')
     },
     filename: (req, res, next) => {
         next(null, Date.now() + '.png')

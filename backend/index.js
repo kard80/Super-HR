@@ -12,8 +12,9 @@ const timeAttendance = require('./routes/timeAttendance')
 const user = require('./routes/user')
 
 const passport = require('passport');
-require('./config/passport/passport');
+require('./config/passport');
 const authentication = passport.authenticate('jwt', {session: false});
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,7 +24,7 @@ app.use('/department', department)
 app.use('/leave', leave)
 app.use('/person', person)
 app.use('/position', position)
-app.use('/timeAttendance', authentication, timeAttendance)
+app.use('/timeAttendance', timeAttendance)
 app.use('/user', user)
 
 db.sequelize.sync({ force: false })
